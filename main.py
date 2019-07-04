@@ -1,3 +1,11 @@
+###################################
+# 2 player game project           #
+# By: Vrajang Parikh              #
+# Last updated Date: 3 July, 2019 #
+###################################
+
+
+
 import pygame as g
 import intro
 import player
@@ -291,15 +299,12 @@ while choice == 0:
     # x pos,width,height,player #, win_width,win_height,game_type
     p1 = player.character(50, 102, 100, 1, win_width, win_height, game_type)
     p2 = player.character(win_width - 50 - 53, 102, 100, 2, win_width, win_height, game_type)
-
     bullets = []  # list of all bullet objects (elements are instance of range weapons): Player 1
     blades = []  # list pf all blade objects (elements are instance of range weapons): Player 2
-
     game_loop(game_type)
     choice = announce_winner()
 
 g.quit()
-print("Done")
 
 
 
